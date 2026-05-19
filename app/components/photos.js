@@ -24,7 +24,7 @@ export default function Photos() {
                         height={480}
                     />
                 </div>
-                <p className={`${inter.className} text-black text-[14px] font-medium leading-[160%] tracking-[-0.14px]`}>Central California -- <span className='font-normal'>The person who grew these was located in Central California and, er, hopefully very well-compensated.</span></p>
+                <p className={`${inter.className} text-black text-[14px] font-medium leading-[160%] tracking-[-0.14px]`}>Central California <span className='font-light'>— The person who grew these was located in Central California and, er, hopefully very well-compensated.</span></p>
             </div>
         </div>
 
