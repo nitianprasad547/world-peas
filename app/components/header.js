@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <div className="w-full h-28 flex flex-row items-center">
             <div className="w-[50%] flex">
-                <Link href="/" className={`${newsreader.className} text-[#426B1F] text-[32px] font-medium leading-[100%] tracking-[-0.32px] font-features-['liga'_off,'clig'_off] ml-[6.25%]`}>
+                <Link href="/" className={`${newsreader.className} text-[#426B1F] text-[32px] font-medium leading-[100%] tracking-[-0.32px] font-features-['liga'_off,'clig'_off] ml-[6.667%]`}>
                     <h1>
                         World Peas
                     </h1>
