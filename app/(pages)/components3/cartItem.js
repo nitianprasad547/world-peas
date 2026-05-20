@@ -1,36 +1,48 @@
 import Image from 'next/image';
 import { inter } from '../../fonts';
+
 export default function CartItem({ name, price, weight, src }) {
-    const totalPrice = (Number(weight) * Number(price)).toFixed(2);
-    const image1 = src;
-    return (
-        <div className={`${inter.className} text-black w-full h-40 mb-7.75 flex flex-wrap flex-row overflow-hidden rounded-3xl bg-[#FAFAF5] justify-between border-[#0000000F] border-2 border-solid`}>
-            <div className='flex flex-row'>
-                <div>
-                    <Image
-                        src={image1}
-                        alt="image"
-                        height={160}
-                        width={160}
-                    />
-                </div>
-                <div>
-                    <h1 className='text-[20px] font-semibold leading-[130%] ml-6 mt-6'>{name}</h1>
-                    <p className='text-[20px] font-semibold leading-[130%] ml-6 mt-1 text-[#426B1F]'>${price} / lb</p>
-                    <div className='border-2 border-solid rounded-[20px] w-32 h-10 flex flex-row ml-6 mt-3.75 border-[#0000000F] bg-[#FFFFFF] py-1 pl-2 pr-4 justify-between'>
-                        <p>{weight} lb</p>
-                        <Image
-                            src="https://res.cloudinary.com/ddoeahbpv/image/upload/Icon_zoun29"
-                            alt="edit"
-                            width={32}
-                            height={32}
-                        />
-                    </div>
-                </div>
-            </div>
-            <div className='mr-6 mt-6 text-[20px] font-semibold leading-[130%]'>
-                ${totalPrice}
-            </div>
+  const totalPrice = (Number(weight) * Number(price)).toFixed(2);
+
+  return (
+    <div className={`${inter.className} text-black w-full mb-6 flex flex-col sm:flex-row overflow-hidden rounded-2xl bg-[#FAFAF5] border border-[#0000000F]`}>
+      
+      {/* Image */}
+      <div className="w-full sm:w-40 h-48 sm:h-auto relative">
+        <Image
+          src={src}
+          alt={name}
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:flex-1 p-4 gap-3">
+        
+        {/* Left: name, price, weight */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-base sm:text-[20px] font-semibold leading-snug">{name}</h1>
+          <p className="text-base sm:text-[20px] font-semibold text-[#426B1F]">${price} / lb</p>
+
+          {/* Weight pill */}
+          <div className="border border-[#0000000F] rounded-[20px] w-28 h-9 flex flex-row bg-white py-1 pl-2 pr-3 justify-between items-center">
+            <p className="text-sm">{weight} lb</p>
+            <Image
+              src="https://res.cloudinary.com/ddoeahbpv/image/upload/Icon_zoun29"
+              alt="edit weight"
+              width={24}
+              height={24}
+            />
+          </div>
         </div>
-    )
+
+        {/* Right: total */}
+        <div className="text-base sm:text-[20px] font-semibold flex sm:justify-end sm:items-start">
+          ${totalPrice}
+        </div>
+
+      </div>
+    </div>
+  );
 }

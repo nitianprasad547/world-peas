@@ -2,7 +2,7 @@ import { inter } from '../../fonts';
 import Image from 'next/image';
 export default function Payment(){
     return(
-        <div className={`${inter.className} w-[27.43%] h-79.5 text-black border-2 border-solid border-[#0000000F] rounded-3xl bg-[#FAFAF5]`}>
+        <div className={`${inter.className} w-full lg:w-[27.43%] h-79.5 text-black border-2 border-solid border-[#0000000F] rounded-3xl bg-[#FAFAF5] order-first lg:order-last mb-20 lg:mb-0`}>
             <h1 className='text-[20px] font-semibold leading-[130%] mt-6 ml-6'>
                 Order summary
             </h1>
