@@ -1,7 +1,7 @@
 import Cart from './cartItem';
 export default function Body(){
     return(
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full px-8 lg:px-4">
                 <Cart
                     name="Heirloom tomato"
                     src="https://res.cloudinary.com/ddoeahbpv/image/upload/ed-o-neil-AvvdZlhDowA-unsplash_1_ldio1l"

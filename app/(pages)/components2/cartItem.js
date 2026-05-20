@@ -3,7 +3,7 @@ import {inter} from '@/app/fonts';
 export default function Cart({ name, src, price, place }) {
     const image = src;
     return (
-        <div className={`${inter.className}w-full flex-wrap flex flex-col rounded-3xl text-black mb-10 overflow-hidden border border-[#E6E6E6] border-solid bg-[#FAFAF5]`}>
+        <div className={`${inter.className}w-full flex-wrap flex flex-col rounded-3xl text-black mb-10 overflow-hidden border border-[#E6E6E6] border-solid bg-[#FAFAF5] pb-7`}>
             <div className='flex items-center justify-center'>
                 <Image
                     src={image}
