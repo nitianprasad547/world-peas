@@ -8,8 +8,8 @@ export default function Cart({ name, src, price, place }) {
                 <Image
                     src={image}
                     alt="image"
-                    width={395}
-                    height={296}
+                    width={600}
+                    height={600}
                 />
             </div>
 
